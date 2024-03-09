@@ -29,14 +29,14 @@ List<GoalsModel> goalsList = [
       title: "Xbox",
       iconName: Assets.imgXbox,
       date: "12/20/20"),
-  GoalsModel(
-      budget: r"$550",
-      title: "Xbox",
-      iconName: Assets.imgXbox,
-      date: "12/20/20"),
-  GoalsModel(
-      budget: r"$550",
-      title: "Xbox",
-      iconName: Assets.imgXbox,
-      date: "12/20/20"),
+  // GoalsModel(
+  //     budget: r"$550",
+  //     title: "Xbox",
+  //     iconName: Assets.imgXbox,
+  //     date: "12/20/20"),
+  // GoalsModel(
+  //     budget: r"$550",
+  //     title: "Xbox",
+  //     iconName: Assets.imgXbox,
+  //     date: "12/20/20"),
 ];

@@ -1,4 +1,3 @@
-
 import 'package:cloud_cash/constants/app_styles.dart';
 import 'package:cloud_cash/views/widgets/balance_info.dart';
 import 'package:cloud_cash/views/widgets/cards_pageview.dart';
@@ -33,6 +32,7 @@ class CardSecion extends StatelessWidget {
                   const CardsPageView(),
                   const Gap(30),
                   LinearPercentIndicator(
+                    padding: EdgeInsets.zero,
                     lineHeight: 10,
                     percent: 0.30,
                     barRadius: const Radius.circular(14),
@@ -64,4 +64,3 @@ class CardSecion extends StatelessWidget {
     );
   }
 }
-

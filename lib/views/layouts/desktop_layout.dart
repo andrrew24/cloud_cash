@@ -1,6 +1,6 @@
 import 'package:cloud_cash/views/layouts/tablet_layout.dart';
 import 'package:cloud_cash/views/widgets/custom_drawer.dart';
-import 'package:cloud_cash/views/widgets/goals_section.dart';
+import 'package:cloud_cash/views/widgets/trail_section.dart';
 import 'package:flutter/material.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -16,20 +16,32 @@ class DesktopLayout extends StatelessWidget {
             Expanded(flex: 2, child: CustomDrawer()),
             Expanded(
                 flex: 7,
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 4,
-                      child: TabletLayout(),
-                    ),
-                    Expanded(
-                      flex: 3,
-                      child: GoalsSection(),
-                    ),
+                child: CustomScrollView(
+                  slivers: [
+                    SliverFillRemaining(
+                      hasScrollBody: false,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 4,
+                            child: TabletLayout(),
+                          ),
+                          Expanded(
+                            flex: 3,
+                            child: TrailSection(),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ))
           ],
         ));
   }
 }
+
+
+
+
+
 

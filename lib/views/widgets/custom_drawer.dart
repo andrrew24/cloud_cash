@@ -44,7 +44,7 @@ class CustomDrawer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 50),
               child: Column(
                 children: [
-                  Gap(220),
+                  const Gap(220),
                   SvgPicture.asset(Assets.imgCloudcash2),
                   const Gap(9),
                   Text(
