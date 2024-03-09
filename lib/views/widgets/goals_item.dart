@@ -31,7 +31,7 @@ class GoalsItem extends StatelessWidget {
                 goalsModel.date,
                 style: Styles.lato14(context),
               ),
-              Gap(35),
+              const Gap(35),
               SvgPicture.asset(goalsModel.iconName),
               Text(
                 goalsModel.title,

@@ -17,30 +17,46 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       color: Colors.white,
       width: MediaQuery.sizeOf(context).width * .7,
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(Assets.imgCloudcash1),
-              const Gap(11),
-              Text(
-                "cloudcash",
-                style: Styles.lato16(context)
-                    .copyWith(color: const Color(0xff0F4264)),
-              )
-            ],
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(Assets.imgCloudcash1),
+                    const Gap(11),
+                    Text(
+                      "cloudcash",
+                      style: Styles.lato16(context)
+                          .copyWith(color: const Color(0xff0F4264)),
+                    )
+                  ],
+                ),
+                const Gap(80)
+              ],
+            ),
           ),
-          const Gap(80),
           const DrawerItemsList(),
-          SvgPicture.asset(Assets.imgCloudcash2),
-          const Gap(9),
-          Text(
-            "Give your money awesome space in cloud",
-            style: Styles.lato8(context),
-          ),
-          const Gap(15),
-          const CustomButton(text: "Upgrade to premium")
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 50),
+              child: Column(
+                children: [
+                  Gap(220),
+                  SvgPicture.asset(Assets.imgCloudcash2),
+                  const Gap(9),
+                  Text(
+                    "Give your money awesome space in cloud",
+                    style: Styles.lato8(context),
+                  ),
+                  const Gap(15),
+                  const CustomButton(text: "Upgrade to premium"),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

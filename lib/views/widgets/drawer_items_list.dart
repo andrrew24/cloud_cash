@@ -13,24 +13,21 @@ class _DrawerItemsListState extends State<DrawerItemsList> {
   int aciveIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: drawerItemsList.length,
-        itemBuilder: (context, index) {
-          return GestureDetector(
-              onTap: () {
-                if (aciveIndex != index) {
-                  setState(() {
-                    aciveIndex = index;
-                  });
-                }
-              },
-              child: DrawerItem(
-                  drawerItemModel: drawerItemsList[index],
-                  isActive: index == aciveIndex));
-        },
-      ),
+    return SliverList.builder(
+      itemCount: drawerItemsList.length,
+      itemBuilder: (context, index) {
+        return GestureDetector(
+            onTap: () {
+              if (aciveIndex != index) {
+                setState(() {
+                  aciveIndex = index;
+                });
+              }
+            },
+            child: DrawerItem(
+                drawerItemModel: drawerItemsList[index],
+                isActive: index == aciveIndex));
+      },
     );
   }
 }
