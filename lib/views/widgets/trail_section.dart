@@ -1,5 +1,6 @@
 import 'package:cloud_cash/views/widgets/goals_section.dart';
 import 'package:cloud_cash/views/widgets/statistics_section.dart';
+import 'package:cloud_cash/views/widgets/transaction_section.dart';
 import 'package:flutter/material.dart';
 
 class TrailSection extends StatelessWidget {
@@ -10,7 +11,7 @@ class TrailSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      children: [GoalsSection(), StatisticsSection()],
+      children: [GoalsSection(), StatisticsSection(), TransactionSection()],
     );
   }
 }

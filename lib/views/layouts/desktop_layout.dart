@@ -39,9 +39,3 @@ class DesktopLayout extends StatelessWidget {
         ));
   }
 }
-
-
-
-
-
-

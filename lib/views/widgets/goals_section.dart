@@ -32,6 +32,7 @@ class GoalsSection extends StatelessWidget {
         ),
         const Gap(15),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: goalsList
               .map((e) => Expanded(child: GoalsItem(goalsModel: e)))
               .toList(),

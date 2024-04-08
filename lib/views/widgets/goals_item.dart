@@ -15,30 +15,27 @@ class GoalsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 158 / 168,
-      child: CustomBackground(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 24, top: 13),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                goalsModel.budget,
-                style: Styles.lato24(context),
-              ),
-              Text(
-                goalsModel.date,
-                style: Styles.lato14(context),
-              ),
-              const Gap(35),
-              SvgPicture.asset(goalsModel.iconName),
-              Text(
-                goalsModel.title,
-                style: Styles.lato20(context),
-              ),
-            ],
-          ),
+    return CustomBackground(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 24, top: 13),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              goalsModel.budget,
+              style: Styles.lato24(context),
+            ),
+            Text(
+              goalsModel.date,
+              style: Styles.lato14(context),
+            ),
+            const Gap(35),
+            SvgPicture.asset(goalsModel.iconName),
+            Text(
+              goalsModel.title,
+              style: Styles.lato20(context),
+            ),
+          ],
         ),
       ),
     );
